@@ -1,6 +1,6 @@
 # Proyecto_final_G8
 
-**Tema**: Anotación de genoma bacteriano
+**Tema**: Anotación de genoma bacteriano.
 
 **Problema**: La anotación genómica completa y precisa es crucial para inferir las funciones previstas de un organismo. Existen numerosas herramientas para anotar genes, grupos de genes, elementos genéticos móviles y otras características diversas. Sin embargo, estas herramientas y canales pueden ser difíciles de instalar y ejecutar, estar especializados para un elemento o característica particular, o carecer de anotaciones para elementos más grandes que proporcionen un contexto genómico importante (Jung, 2024).
 
