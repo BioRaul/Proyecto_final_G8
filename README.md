@@ -74,6 +74,10 @@ Al tener el link directo de nuestra secuencia lo subimos con la sección *Paste/
 
 ## Para la anotación de los contings utilizaremos la herramienta **Bakta** 
 
+Bakta es una herramienta para la anotación rápida y estandarizada de genomas y plásmidos bacterianos que implementa un flujo de trabajo integral capaz de utilizar metadatos de secuencia además del ensamblaje del genoma (Schwengers et al., 2021).
+
+Prokka coordina un conjunto de herramientas de software existentes para lograr una anotación rica y confiable de secuencias bacterianas genómicas y se puede instalar en cualquier sistema Unix  ( Stewart et al. , 2009 ) . Es ampliamente utilizado en la investigación genómica bacteriana debido a su facilidad de uso, velocidad y precisión en la anotación automática de genoma ( Aziz et al. , 2008 ). Según lo recomendado según el mismo autor Seemann (2014) se debe de utilizar Bakta como sucesor del Prokka.
+
 ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/b5bed94d-9b34-40c8-a49e-6614a23e550c)
 
 Elegimos los parametros:
@@ -170,6 +174,8 @@ El primer anillo del centro de la figura representa el contenido de Guanina-Cito
 
 Para identificar plásmidos en nuestros contings utilizamos la herramienta **PlasmidFinger**. Aquí no hay parametros especiales que debamos seguir.
 
+permite la identificación de motivos plasmídicos usando una base de datos no redundante de replicones (secuencias que activan o controlan la replicación del plásmido y son identificativas de un determinado tipo de plásmido) y los asigna a un determinado grupo Inc (grupo de incompatibilidad plasmídica) (Carattoli *et al*., 2014).
+
 ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/034df5a5-8b91-4007-89b0-41576da111c6)
 
 Los resultados que nos da **PlasmidFinger** son diversos, entre ellos tenemos:
@@ -179,6 +185,8 @@ Los resultados que nos da **PlasmidFinger** son diversos, entre ellos tenemos:
 <img width="376" alt="image" src="https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/9661452c-58dd-48ea-8be3-0f54add91380">
 
 ### results.tsv: Es un archivo tabular con las siguientes columnas:
+
+TSV Es un formato de archivo utilizado para almacenar datos tabulares en texto plano. En un archivo TSV, cada línea representa una fila de datos, y los valores de cada fila están separados por tabuladores
 
 Es una tabla de nueve columnas que corresponden a: **Comuna1**: *Database*; **Columna2**: *Plasmid*; **Columna3**: *Identity*; **Columna4**: *Query/Template Length*; **Columna5**: *Conting*; **Columna6**: *Position in conting*; **Columna7**: *Note*; **Columna8**: *Accession number*.
 
@@ -208,6 +216,8 @@ Todas las secuencias de plásmidos correspondientes a los plásmidos de Staphylo
 
 Para identificar integrones utilizaremos la herramienta **IntegronFinger**
 
+Es capaz de identificar integrones con nuevos casetes y es complementario al uso de bases de datos como Integrall que almacenan integrones conocidos y permiten buscar homología de los casetes por similitud de secuencia (Nerón, B *et al*., 2022). 
+
 Los parametros para el uso de esta herramienta son los siguintes:
 
 - En *"Thorough local detection"* colocamos **Yes**
@@ -228,15 +238,68 @@ El otro archivo obtenido es uno de anotación integrado como tabular.
 
 ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/199e76cf-f5c0-486c-99ce-4a5db89286e5)
 
+## Para detectar elementos IS utilizaremos la herramienta **ISEScan** que nos generará siete resultados o "outputs":
+
+Es una secuencia corta de ADN que actúa como un elemento transponible simple . Las secuencias de inserción tienen dos características principales: son pequeñas en relación con otros elementos transponibles y solo codifican proteínas implicadas en la actividad de transposición (Azziz R.K. *et al* 2010).
+
+- Un resumen en forma de tabla
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/3306e611-3b1c-495e-9b58-2fd20a12f5dc)
+
+- Los resultados en forma de tabla
+
+Aquí podemos ver los elementos IS detectados, que son un total de 20. 
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/f7c41cac-a962-4a39-b788-a76bf9866a3b)
+
+Para saber dónde están ubicados debemos de utilizar la herramienta **Group data by a column**
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/54cfaa0f-3925-4758-92f3-8e9869ac1df2)
+
+Tenemos el número de elementos IS por cada conting:
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/9e4b5118-358a-46cd-ac7f-056fffe977ac)
+
+Tenemos también el númeor de elementos IS identificados por cada familia de IS
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/f9f21794-a7c6-47c1-aa75-76aba4ed4547)
+
+- Los resultados como un archivo GFF
+
+  ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/9c4fcb2b-07c1-4804-9f6d-d1a1be65413e)
+
+- **Varios archivos FASTA**
+
+- Secuencia de nucleotidos IS
+  
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/a646295e-d07b-4c5f-8074-af8d808dfbb4)
+
+- Secuencia de nucleotidos ORF
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/3e976e21-d7bc-4a91-9acb-f4199ddb12a4)
+
+- Secuencia de amonoacidos ORF
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/ede80283-e61b-4b8a-bdd3-d16a053e96a3)
 
 
 **Bibliografía**
 
+- Aziz RK, et al. El servidor RAST: anotaciones rápidas utilizando tecnología de subsistemas, Genómica BMC, 2008, vol. 9 pág. 75
+
 - Beckloff, N., Starkenburg, S., Freitas, T., & Chain, P. (2012). Bacterial genome annotation. Microbial Systems Biology: Methods and Protocols, 471-503.
+
+- Carattoli, A., Zankari, E., García-Fernández, A., Voldby Larsen, M., Lund, O., Villa, L., ... & Hasman, H. (2014). In silico detection and typing of plasmids using PlasmidFinder and plasmid multilocus sequence typing. Antimicrobial agents and chemotherapy, 58(7), 3895-3903.
 
 - Jung, J. M., Rahman, A., Schiffer, A. M., & Weisberg, A. J. (2024). Beav: A bacterial genome and mobile element annotation pipeline. bioRxiv, 2024-01.
 
+- Néron, B., Littner, E., Haudiquet, M., Perrin, A., Cury, J., & Rocha, E. P. (2022). IntegronFinder 2.0: identification and analysis of integrons across bacteria, with a focus on antibiotic resistance in Klebsiella. Microorganisms, 10(4), 700.
+
 - Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann, A. (2021). Bakta: rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial genomics, 7(11), 000685.
+
+- Seemann, T. (2014). Prokka: rapid prokaryotic genome annotation. Bioinformatics, 30(14), 2068-2069.
+
+- Stewart C.A., et al. DIYA: un canal de anotación bacteriana para cualquier laboratorio de genómica, Bioinformática, 2009, vol. 25 (pág. 962-963)
 
 - Pertea, G., & Pertea, M. (2020). GFF Utilities: GffRead and GffCompare. F1000Research, 9, ISCB Comm J-304. https://doi.org/10.12688/f1000research.23297.2
 
