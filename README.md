@@ -108,6 +108,126 @@ En “Selection of the output files”: selecionamos los siguientes archivos de 
 
 ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/df80b9b7-2df8-4477-b79a-c75916cc5220)
 
+Los resultados que nos da **Bakta** son diversos, entre ellos tenemos:
+
+### **Analysis_summary**: Es un resumen del analisis en forma de archivo de texo
+
+Entre los resultados más importantes podemos destacar los siguiente: 
+
+- Que se han proporcionado 44 contings como entrada "input" (El recuento se secuencias).
+
+- El borrador del genoma tiene un largo de 2'911.349 pb siendo un poco más corto de los 2'914.567 esperados obtenidos por Hichiki *et al*. 2019.
+
+- Se han encontrado 2.717 CDS's, un poco más que los 2.704 obtenidos por Hichiki *et al*. 2019.
+
+- Contiene 5 proteínas pequeñas, no hay esta información en Hichiki *et al*. 2019.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/677794ef-17b0-4e7c-a898-5c27f6003285)
+
+### **Nucleotide sequence**: Son secuencuias de nucleotidos en archivo FASTA
+
+Aquí podemos destacar el número de secuencias que me da este archivo, que son un total de 2.901 secuencias. 
+
+Además, que aquí se almacenan:
+
+- ARNt
+
+- ARNtm
+
+- ARNr
+
+- ncARN
+
+- CDS
+
+- SORF
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/3681f10d-7ec3-4e0d-8148-6f6866d69c72)
+
+### Annotation summary: Son anotaciones como TSV simples y legibles.
+
+Es una tabla de nueve columnas que corresponden a: **Comuna1**: *Sequence ID*; **Columna2**: *Type*; **Columna3**: *Start*; **Columna4**: *Stop*; **Columna5**: *Strand*; **Columna6**: *Locus Tag*; **Columna7**: *gene*; **Columna8**: *Product*; **Columna9**: *DbXrefs*.
+
+Aquí contiene 2.933 líneas de secuencia y la información de: ARNt, ARNtm, ARNr, ncARN, CDS's, sORF's, gaps, oriCs, oriVs, oriTs.
+
+<img width="314" alt="image" src="https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/54a0302d-c873-4371-83a7-7fecd14484bb">
+
+### Annotation and sequence: está en formato GFF
+
+GFF es un formato de archivo porpular utilizado por porgramas de bioinformatica para representar e intercambiar información sobre diversas caracteristicas genomicas, como la ubicacion y la estructura de genes y trascripciones (Pertea, G., & Pertea, M. 2020).
+
+Contiene los siguientes campos: seqid, source, type, start, end, score, strand, phase, attributes. Aqupi tenemos 51.563 líneas de secuencia.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/3b699ac2-ad59-4538-a3f2-e7688a62fa33)
+
+### Plot of the annotation: Gráfica de la anotación en forma de genoma circular
+
+El primer anillo del centro de la figura representa el contenido de Guanina-Citocina (GC) por ventana deslizante en toda la secuencia o secuencias, con el GC en verde por encima y el GC en rojo por debajo de la media. El segundo anillo representa la desviación de GC en naranja y azul. Todas las características se representan en dos anillos que representan la cadena directa e inversa de exterior a interior con CDS en gris (los otros colores son difíciles de distinguir).
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/0d0a02a8-ffcf-4245-87e7-eeb959cc631d)
+
+## Plásmidos
+
+Para identificar plásmidos en nuestros contings utilizamos la herramienta **PlasmidFinger**. Aquí no hay parametros especiales que debamos seguir.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/034df5a5-8b91-4007-89b0-41576da111c6)
+
+Los resultados que nos da **PlasmidFinger** son diversos, entre ellos tenemos:
+
+### raw results.txt: Es un archivo de texto que contiene la tabla de resultados y las alineaciones.
+
+<img width="376" alt="image" src="https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/9661452c-58dd-48ea-8be3-0f54add91380">
+
+### results.tsv: Es un archivo tabular con las siguientes columnas:
+
+Es una tabla de nueve columnas que corresponden a: **Comuna1**: *Database*; **Columna2**: *Plasmid*; **Columna3**: *Identity*; **Columna4**: *Query/Template Length*; **Columna5**: *Conting*; **Columna6**: *Position in conting*; **Columna7**: *Note*; **Columna8**: *Accession number*.
+
+En este output podemos destacar que nos indica la presencia de cinco secuencias de plásmidos localizados de la siguiente manera: tres en conting00019, uno en conting00002 y uno en 00024. 
+
+Al observer el número de acceso de estos contings en NCBI podemos visualizar que:
+
+- Tanto AP003139 como CP000737 corresponden a plásmidos de *Staphylococcus aureus*
+
+- AF503772 corresponde a un plásmido de *Enterococcus faecalis*
+
+- CP003584 corresponde a un plásmido de *Enterococcus faecium*
+
+Todas las secuencias de plásmidos correspondientes a los plásmidos de Staphylococcus aureus están todas en contig00019, lo que hace que este cóntig probablemente sea un plásmido. Además, este contig tiene una longitud de 30.347 pb, que es similar a la longitud esperada del plásmido para KUN1163 en la Tabla 1 en Hikichi et al. 2019.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/f44cc31a-708f-41b1-8bae-f7d36846a9f7)
+
+### Plasmid.fasta: Es una archivo fasta que contiene las secuencias que mejor coinciden con el genoma de consulta.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/8bec8058-0dd8-4aa9-a7be-92a6b5c3219a)
+
+### Hit in genome.fasta: Es un archivo fasta que contiene los genes plasmidicos que mejor coinciden de la base de datos.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/f0235d49-3602-458e-a417-f22a26ab5dae)
+
+## Integrones
+
+Para identificar integrones utilizaremos la herramienta **IntegronFinger**
+
+Los parametros para el uso de esta herramienta son los siguintes:
+
+- En *"Thorough local detection"* colocamos **Yes**
+
+- En *“Search also for promoter and attI sites?”* colocamos **Yes**
+
+- En *“Remove log file”* colocamos **Yes**
+
+<img width="589" alt="image" src="https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/ae67c229-87ec-4c2f-befa-e81c9f534bbe">
+
+La herramienta **IntegronFinger** nos da dos resultados "output".
+
+Un resumen que contenga, para cada secuencia de la entrada, el número de elementos CALIN, elementos In0 e integrones completos identificados. Aquí podemos notar que no se han encontrado elementos integrones en ningún contig, Esto podría deberse a que el genoma es demasiado estable o a que la calidad del ensamblaje no es lo suficientemente buena y se eliminaron algunas partes útiles para la detección de integrones.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/df909c1a-7374-4a29-9969-7a91ed7c4d9a)
+
+El otro archivo obtenido es uno de anotación integrado como tabular.
+
+![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/199e76cf-f5c0-486c-99ce-4a5db89286e5)
+
 
 
 **Bibliografía**
@@ -117,5 +237,7 @@ En “Selection of the output files”: selecionamos los siguientes archivos de 
 - Jung, J. M., Rahman, A., Schiffer, A. M., & Weisberg, A. J. (2024). Beav: A bacterial genome and mobile element annotation pipeline. bioRxiv, 2024-01.
 
 - Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann, A. (2021). Bakta: rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial genomics, 7(11), 000685.
+
+- Pertea, G., & Pertea, M. (2020). GFF Utilities: GffRead and GffCompare. F1000Research, 9, ISCB Comm J-304. https://doi.org/10.12688/f1000research.23297.2
 
 - Torkian, B., Hann, S., Preisner, E. et al. BLAST-QC: automated analysis of BLAST results. Environmental Microbiome 15, 15 (2020). https://doi.org/10.1186/s40793-020-00361-y
