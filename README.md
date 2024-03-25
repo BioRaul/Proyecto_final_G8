@@ -65,8 +65,9 @@ Al revisar nuestros resultados podemos concluir que, efectivamente, nustra secue
 
 # Anotación del genoma bacteriano
 
-la anotación de secuencias de organismos procariotas se separa en notación estructural y funcional. La anotación estructural depende del interrogatorio algoritmico de la evidnecia experimental para descubrir las caracteristicas físicas de un gen, la anotación funcional depende de la similitud de secuencia con genes o proteínas conocidos en un esfuerzo por evaluar la funsión de un gen. la combinación de anotaciones estructurales y funcionales entre genomas promueve niveles altos de anotaciones precisas (Beckloff, 2012).
+Para ilustrar el proceso para anotar un genoma bacteriano, tomamos un ensamblaje de un genoma bacteriano (muestra KUN1163) generado siguiendo un tutorial de ensamblaje de genoma bacteriano a partir de datos producidos en “Secuencias completas del genoma de ocho cepas de Staphylococcus aureus resistentes a la meticilina aisladas de pacientes en Japón” ( Hikichi et al. 2019 ).
 
+la anotación de secuencias de organismos procariotas se separa en notación estructural y funcional. La anotación estructural depende del interrogatorio algoritmico de la evidnecia experimental para descubrir las caracteristicas físicas de un gen, la anotación funcional depende de la similitud de secuencia con genes o proteínas conocidos en un esfuerzo por evaluar la funsión de un gen. la combinación de anotaciones estructurales y funcionales entre genomas promueve niveles altos de anotaciones precisas (Beckloff, 2012).
 
 Al tener el link directo de nuestra secuencia lo subimos con la sección *Paste/Fetch data* 
 
@@ -282,6 +283,11 @@ Tenemos también el númeor de elementos IS identificados por cada familia de IS
 
 ![image](https://github.com/BioRaul/Proyecto_final_G8/assets/163359448/ede80283-e61b-4b8a-bdd3-d16a053e96a3)
 
+## Conclusiones
+
+La anotación del genoma es un en método muy útil para la predicción, el analisis y la interpretación de la estructura y función de los componentes del genoma para extraer su significado biológico y comprender los procesos biológicos en los que participan. Entre otras cosas, identifica la ubicación de los genes y todas las regiones codificantes de un genoma ( anotación estructural ) y determina qué hacen esos genes ( anotación funcional ). Con las anotaciones se pueden visualizar y comprender fácilmente el contexto genómico de cualquier secuencia problema.
+
+Bakta es una poderosa herramienta para anotar un genoma bacteriano, así como PlasmidFinder, IntegronFinder y ISEScan son exelentes herramintas para la anptación estructural adicional. Es importante el desarrollar herramientas fáciles de comprender y manipular para lograr descifrar los genes que se encuentran en un borrador de genoma bacteriano.
 
 **Bibliografía**
 
@@ -290,6 +296,8 @@ Tenemos también el númeor de elementos IS identificados por cada familia de IS
 - Beckloff, N., Starkenburg, S., Freitas, T., & Chain, P. (2012). Bacterial genome annotation. Microbial Systems Biology: Methods and Protocols, 471-503.
 
 - Carattoli, A., Zankari, E., García-Fernández, A., Voldby Larsen, M., Lund, O., Villa, L., ... & Hasman, H. (2014). In silico detection and typing of plasmids using PlasmidFinder and plasmid multilocus sequence typing. Antimicrobial agents and chemotherapy, 58(7), 3895-3903.
+
+- Hikichi, M., Nagao, M., Murase, K., Aikawa, C., Nozawa, T., Yoshida, A., ... & Nakagawa, I. (2019). Complete genome sequences of eight methicillin-resistant Staphylococcus aureus strains isolated from patients in Japan. Microbiology Resource Announcements, 8(47), 10-1128.
 
 - Jung, J. M., Rahman, A., Schiffer, A. M., & Weisberg, A. J. (2024). Beav: A bacterial genome and mobile element annotation pipeline. bioRxiv, 2024-01.
 
